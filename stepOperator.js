@@ -22,7 +22,6 @@ module.exports = class StepOperator{
         var completeables = [...this.steps].filter(([k, v]) => {
             return v.incompletePreReqs() === 0;
         });
-        debugger;
         completeables = completeables.map(([k,v]) => {
             return v;
         }).sort((a, b) => {

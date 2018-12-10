@@ -4,6 +4,7 @@ module.exports = class Step {
         this.designator = designator;
         this.isComplete = false
         this.preRequisites = new Map();
+        this.duration = designator.charCodeAt(0) - 'A'.charCodeAt(0) + 61; 
     }
 
     addPreReq(step){
